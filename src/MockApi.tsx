@@ -1,5 +1,4 @@
-import { Button, Empty, Input, message, Modal, Spin } from "antd";
-import Form from "antd/es/form/Form";
+import { Button, Empty, Input, message, Modal, Spin, Form } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -42,9 +41,9 @@ const MockApi = () => {
     });
   };
 
-  const hideModal = () => {
-    setModalOpen(false);
-  };
+  // const hideModal = () => {
+  //   setModalOpen(false);
+  // };
 
   const cancelModal = () => {
     setModalOpen(false);
@@ -70,7 +69,6 @@ const MockApi = () => {
 
   // Edit data
 
-  
   const editData = async (id: string | undefined, values: IPut) => {
     if (!id) return;
     setLoading(true); // Start loading while editing data
